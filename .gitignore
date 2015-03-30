@@ -25,3 +25,5 @@ local.properties
 .target
 # TeXlipse plugin
 .texlipse
+
+.dist-buildwrapper
