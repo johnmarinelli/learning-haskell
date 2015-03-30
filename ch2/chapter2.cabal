@@ -1,0 +1,14 @@
+name:           chapter2
+version:        0.1
+cabal-version:  >=1.2
+build-type:     Simple
+author:         john
+
+library
+  hs-source-dirs:  
+                   section2, 
+                   src
+  build-depends:   base >= 4
+  ghc-options:     -Wall
+  exposed-modules: functions
+
