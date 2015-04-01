@@ -8,5 +8,9 @@ data Client = GovOrg     String -- name
                           -- Show is a class
 
 --   type     ctor   constructor args
-data Person = Person String String 
+data Person = Person String String Gender
+              deriving Show
+
+-- enum
+data Gender = Male | Female | Unknown
               deriving Show
