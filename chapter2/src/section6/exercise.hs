@@ -12,7 +12,13 @@ ack m n | otherwise = ack (m-1) (ack m (n-1))
 -- output: two lists; one with first components and other with snd components
 
 unzip' :: [(a,a)] -> ([a], [a])
+
+-- base case.  when lst only has one member, return a pair containing a single element
+-- array of the first and second items of the element in lst.
 unzip' lst | null (tail lst) = ([fst (head lst)], [snd (head lst)])
+
+-- recursive step.  concat the first and second items in the head of lst
+-- to a recursive call to unzip'.
 unzip' lst =  ( fst (head lst) : fst (unzip' (tail lst)), 
                 snd (head lst) : snd (unzip' (tail lst)) 
               )
